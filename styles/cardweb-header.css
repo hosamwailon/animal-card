@@ -1,0 +1,156 @@
+#header{
+    display: flex;
+    justify-content:space-between;
+    padding: 3vh 3vw;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    height: 10vh;
+    background: linear-gradient(to right,rgb(10, 39, 133),rgb(255, 61, 61),rgb(120, 10, 172)80%);
+    border-bottom: 1px solid rgba(104, 99, 99, 0.808);
+    
+    align-items: center;
+    min-height: 70px;
+
+    z-index: 200;
+
+     
+} 
+@media(width <= 650px){
+    #header #right-header{
+        display: none;
+    }
+
+}
+
+
+#left-header img{
+    width: 60%;
+    height: 60%;
+}
+#left-header{
+   min-width: 10vw;
+}
+
+
+#right-header{
+   display: flex;
+   justify-content:flex-end;
+   align-items: center;
+   gap: 1vw; 
+   width:40vw ;
+}
+
+input{
+    height: 10vh;
+    width: 30vw;
+    padding-left:1rem;
+    border-radius: 10px;
+    background-color: rgb(59, 59, 59);
+    border:none;
+    font-size: 1.5rem;
+    color: white;
+    
+}
+
+.your-name{
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.collection,.contact{
+    position: absolute;
+    min-height: 50px;
+    height: auto;
+    width: 300px;
+    background-color: rgb(71, 71, 71);
+    border: 1px solid rgb(20, 20, 20);
+    z-index: 400;
+    top:50px;
+    right: 0px;
+    display: none;
+    pointer-events: none;
+    padding: 3px;
+    font-size: 3rem;
+    color: white;
+}
+
+
+.basket-button,.contact-button{
+    padding: 0.5em;
+    border-radius: 50%;
+    border:none;
+    cursor: pointer;
+    background-color: transparent;
+    position: relative;
+    display: flex;
+
+}
+.basket-button:hover,.contact-button:hover{
+    background-color:rgba(255, 255, 255, 0.24);
+}
+.basket-button:active,.contact-button:active{
+    background-color:rgba(255, 255, 255, 0.425);
+    transform: scale(0.9);
+}
+
+
+#right-header img{
+    width: 5vh;
+    min-width: 30px;
+    align-self: center;
+    justify-self: center;
+}
+#coins{
+    display: flex;
+    justify-content: center;
+    box-sizing: content-box;
+}
+.your-coins{
+    min-height: 5vh;
+    min-width: 20vw;
+    border:2px solid black;
+    font-size: 2rem;
+    background-color: white;
+}
+
+#add-coins-button{
+   min-height: 37px;
+   min-width: 40px;
+   border:2px solid black;
+   border-left: none;
+   background-color: rgb(255, 251, 28);
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor:pointer ;
+}
+#add-coins-button:active{
+    background-color: rgb(204, 255, 18);
+}
+#add-coins-button img{
+    height: 5
+}
+.notE-box{
+    position:absolute;
+    bottom: -60px;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+
+}
+#notE{
+    color: hsl(0, 100%, 50%);
+    background-color: rgb(49, 49, 49);
+    border-radius: 5px;
+    width:18ch;
+    font-size: 3rem;
+    font-weight: bold;
+    padding-left: 1ch;
+}
+
+
+

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animal Card Shop</title>
+        <link rel="icon" type="image/x-icon" href="media/5JmJNj-LogoMakr.png">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="styles/cardweb-header.css">
+        <link rel="stylesheet" href="styles/cardweb-main.css">
+        <link rel="stylesheet" href="styles/cardweb-footer.css">
+        <link rel="stylesheet" href="styles/general.css">
+        <link rel="stylesheet" href="styles/slider.css">
+
+    </head>
+    <body>
+       <div>
+        <header id="header">
+           <section id="left-header">
+              <img alt="logo" src="media/5JmJNj-LogoMakr.png"  >
+           </section>
+           <section id="right-header">
+                <div id="coins">
+                    <div class="your-coins js-coin-display"></div>
+                    <div id="add-coins-button"class="js-add-coin"><img src="icons/plus.png"></div>
+                </div>
+
+                <a class="basket-button js-basket-button"
+                   href="collection.html">
+                    <div  class="js-collection collection"></div>
+                    <img src="icons/card.png">
+                </a>
+                <button class="contact-button js-contact-button">
+                    <div class="js-contact  contact ">0745487659</div>
+                    <img src="icons/phone.png">
+                </button>
+
+                <button>Sign in</button>
+           </section>
+
+            <div class="notE-box"><div id="notE" class="js-notE"></div></div>    
+        </header>
+
+
+        <main>
+          <div class="s-outer-c">
+                 <div class="left-arrow js-slide-prev-btn"><img src="icons/left-arrow.png"></div> 
+                 <div class="right-arrow js-slide-next-btn"><img src="icons/right-arrow.png"></div>  
+                <nav class=" slider-container js-slider-container">
+                   <div class="wrapper js-wrapper">
+
+                   </div>
+                    <div class="slide-controls">
+                        <button class="slide-control-btns js-slide-prev-btn">&#8592;previous</button>
+                        <button class="slide-control-btns js-slide-next-btn">Next&#8594;</button>
+                    </div>
+                </nav>
+                <button class="auto-slide-btn js-auto-slide-btn">Auto Play</button>
+                <div class="auto-slide-state js-auto-slide-state">Auto Play:Off</div>
+          </div> 
+  
+          
+          
+          
+          <section id="grid-container" class="js-grid-container">
+
+          </section>
+        </main>
+
+
+        <footer>
+            <img alt="logo" src="media/5JmJNj-LogoMakr.png" >
+        </footer>
+
+      </div>
+     <script type="module" src="scripts/cardweb.js"> </script>
+     <script type="module" src="scripts/slider.js"> </script>
+    </body>
+</html>
