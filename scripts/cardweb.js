@@ -78,7 +78,7 @@ document.querySelectorAll('.js-grid-slot').forEach(card=>{
 document.querySelector('.js-nav-button').addEventListener('click',()=>{
   const nav = document.querySelector('.js-nav');
   if(nav.style.transform === ''){
-     nav.style.transform = 'translateX(100%)';
+     nav.style.transform = 'translateX(-100%)';
   }else{
     nav.style.transform = '';
   }
