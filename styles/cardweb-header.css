@@ -29,7 +29,7 @@
     top:max(60px,13vh);
     
     bottom:0;
-    right:0;
+    right:-200px;
     background-color: rgb(46, 46, 46);
     box-sizing: border-box;
     border-left: 1px solid rgb(92, 91, 91);
