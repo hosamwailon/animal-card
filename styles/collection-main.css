@@ -1,16 +1,13 @@
 
 .main-container{
     display: flex;
-    flex-direction:column;
     gap: 7vw;
 
 }
-@media(max-width:450px){
+@media(max-width:500px){
     .main-container{
-        flex-direction:column;
-    }
-    #header .right-header{
-        display:none;
+        flex-direction:column-reverse;
+
     }
 }
 
