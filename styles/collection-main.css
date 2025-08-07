@@ -9,6 +9,9 @@
     .main-container{
         flex-direction:column;
     }
+    #header .right-header{
+        display:none;
+    }
 }
 
 .grid-container{
