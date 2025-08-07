@@ -37,8 +37,8 @@
     background:url(/media/galaxy.jpg);
         
     max-width:1540px;
-    min-width: 250px;
-    margin-bottom: 10vh;
+    min-width: 308px;
+    margin-bottom: 15vh;
 
     border: 10px solid var(--gold);
     border-radius: 10px;
@@ -152,7 +152,7 @@
 .auto-slide-btn{
   position: absolute;
   right: 50%;
-  bottom:-1.75em;
+  bottom:-1.5em;
 
   color: rgb(0, 0, 0);
   background:var(--gold);
@@ -160,11 +160,13 @@
   border: none;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
+  min-width: 120px;
 
   padding:0.3em 0.8em ;
 
   font-size: 1.15rem;
   margin-right:1px;
+  white-space: nowrap;
 }
 .auto-slide-state{
     position: absolute;

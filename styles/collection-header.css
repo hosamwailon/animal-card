@@ -18,7 +18,7 @@
   margin-left:5vw ;
 }
 .left-header img{
-    height: 80%;
+    height: 15vh;
 
 }
 .right-header{
@@ -38,6 +38,7 @@
     background-color:transparent;
     position: relative;
     display: flex;
+    transition: transform 0.08s,background-color 0.1s ;
 
 }
 .contact-btn img{
@@ -58,7 +59,7 @@
     color: white;
     cursor: pointer;
     font-size: 1.2rem;
-    transition: transform 0.08s;
+    transition: transform 0.08s,background-color 0.1s ;
 }
 
 .home-btn:hover,

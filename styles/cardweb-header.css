@@ -6,28 +6,86 @@
     left: 0;
     right: 0;
     top:0;
-    height: 10vh;
+    height: max(60px,13vh);
     background: linear-gradient(to right,rgb(10, 39, 133),rgb(255, 61, 61),rgb(120, 10, 172)80%);
     border-bottom: 1px solid rgba(104, 99, 99, 0.808);
     
     align-items: center;
-    min-height: 70px;
 
-    z-index: 200;
+    z-index: 1200;
+    box-sizing: border-box;
 
      
 } 
-@media(width <= 650px){
+.nav{
+    display: none;
+    flex-direction: column;
+    width: 200px;
+    justify-content:flex-start;
+    gap: 4vh;
+    padding-top: 4vh;
+    align-items: end;
+    position: fixed;
+    top:max(60px,13vh);
+    
+    bottom:0;
+    right:0;
+    background-color: rgb(46, 46, 46);
+    box-sizing: border-box;
+    border-left: 1px solid rgb(92, 91, 91);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+.nav img{
+    width: 5vh;
+    min-width: 30px;
+    align-self: center;
+    justify-self: center;
+}
+.nav-button{
+    display: none;
+    background-color: transparent;
+    height: max(30px,8vh);
+    width: max(30px,8vh);
+    border: none;
+    border-radius: 50%;
+    
+}
+.nav-button:hover{
+    background-color: rgba(255, 255, 255, 0.212);
+}
+.nav-button:active{
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
+.nav-button img{
+    height: max(18px,6vh);
+}
+
+
+@media(width <= 760px){
     #header #right-header{
         display: none;
     }
+    .nav-button{
+        display: initial;
+    }
+   #header #left-header img{
+     height: max(30px,8vh);
+    }
+    .nav{
+        display: flex;
+    }
+    #coins div{
+    border: none;
+}
 
 }
 
 
 #left-header img{
-    width: 60%;
-    height: 60%;
+    height: max(30px,9vh);
 }
 #left-header{
    min-width: 10vw;
@@ -39,11 +97,10 @@
    justify-content:flex-end;
    align-items: center;
    gap: 1vw; 
-   width:40vw ;
+   width:40vw ; 
 }
 
 input{
-    height: 10vh;
     width: 30vw;
     padding-left:1rem;
     border-radius: 10px;
@@ -60,21 +117,17 @@ input{
     font-weight: bold;
 }
 
-.collection,.contact{
-    position: absolute;
-    min-height: 50px;
-    height: auto;
-    width: 300px;
-    background-color: rgb(71, 71, 71);
-    border: 1px solid rgb(20, 20, 20);
-    z-index: 400;
-    top:50px;
-    right: 0px;
-    display: none;
-    pointer-events: none;
-    padding: 3px;
-    font-size: 3rem;
-    color: white;
+
+.sign-in{
+    color: rgb(255, 255, 255);
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding:0.4em 1em ;
+    font-weight: bold;
+    white-space: nowrap;
+   
 }
 
 
@@ -88,13 +141,52 @@ input{
     display: flex;
 
 }
-.basket-button:hover,.contact-button:hover{
+.basket-button,
+.contact-button{
+     transition: transform 0.1s,background-color 0.1s   ;
+}
+.basket-button:hover,.contact-button:hover,.sign-in:hover{
     background-color:rgba(255, 255, 255, 0.24);
 }
-.basket-button:active,.contact-button:active{
+.basket-button:active,.contact-button:active,.sign-in:active{
     background-color:rgba(255, 255, 255, 0.425);
     transform: scale(0.9);
 }
+
+.contact-links{
+    background-color: rgb(65, 65, 65);
+     
+    position:fixed;
+    top:max(60px,13vh);
+    right: 8.5vw;
+    display: flex;
+    flex-direction: column;
+    padding: 3ch;
+    color: white;
+    visibility: hidden;
+    z-index: -1;
+     
+    
+}
+.nav-contact-links{
+
+    display: flex;
+    flex-direction: column;
+    padding: 2ch;
+    color: white;
+    visibility: hidden;
+    z-index: -1;
+    border: 1px solid rgb(83, 81, 81);
+     
+    
+}
+
+.contact-links div{
+    display: flex;
+    flex-direction:row;
+    gap: 3ch;
+}
+
 
 
 #right-header img{
@@ -109,7 +201,6 @@ input{
     box-sizing: content-box;
 }
 .your-coins{
-    min-height: 5vh;
     min-width: 20vw;
     border:2px solid black;
     font-size: 2rem;
@@ -117,8 +208,8 @@ input{
 }
 
 #add-coins-button{
-   min-height: 37px;
-   min-width: 40px;
+   height: 40px;
+   width: 40px;
    border:2px solid black;
    border-left: none;
    background-color: rgb(255, 251, 28);
@@ -127,11 +218,15 @@ input{
    align-items: center;
    cursor:pointer ;
 }
+
+
+
 #add-coins-button:active{
     background-color: rgb(204, 255, 18);
 }
 #add-coins-button img{
-    height: 5
+    height: 30px;
+    width: 30px;
 }
 .notE-box{
     position:absolute;
@@ -151,6 +246,15 @@ input{
     font-weight: bold;
     padding-left: 1ch;
 }
+.nav-element{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content:space-between;
+    align-items: center;
+    width: 90%;
+    color: rgb(172, 172, 172);
+}
+
 
 
 

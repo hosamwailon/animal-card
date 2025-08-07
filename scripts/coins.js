@@ -2,6 +2,7 @@ export let coins = JSON.parse(localStorage.getItem('coins'))||0;
 
 export function updateCoins(){
    document.querySelector('.js-coin-display').innerHTML = coins; 
+   document.querySelector('.js-nav-coin-display').innerHTML = coins; 
    localStorage.setItem('coins',JSON.stringify(coins));
 }
 export function buySystem(cardPrice){

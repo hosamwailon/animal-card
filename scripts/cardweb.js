@@ -5,7 +5,7 @@ import{coins,updateCoins,buySystem,coinsIncreament} from './coins.js';
 
 document.addEventListener('DOMContentLoaded',()=>{
     updateCoins();
-})
+});
 
 
 
@@ -16,7 +16,7 @@ cards.forEach((card,index) =>{
         return;
     }
    summaryHTML+=`
-        <div class="grid-slot">
+        <div class="grid-slot js-grid-slot">
             <div class="price">${card.price}C</div>
             <img class="card-img" src="${card.image}">
             <div class="card-info">
@@ -59,6 +59,57 @@ document.querySelector('.js-add-coin').addEventListener('click',()=>{
   coinsIncreament();
     
 });
+document.querySelector('.js-nav-add-coin').addEventListener('click',()=>{
+  coinsIncreament();
+    
+});
+let overlayTimeoutId;
+document.querySelectorAll('.js-grid-slot').forEach(card=>{
+    
+    card.addEventListener('mouseover',()=>{
+             clearTimeout(overlayTimeoutId);
+            document.querySelector('.js-overlay').style.display='initial';
+   });
+   card.addEventListener('mouseout',()=>{
+           overlayTimeoutId = setTimeout(()=>{document.querySelector('.js-overlay').style.display='none';},500) 
+            
+   })
+});
+document.querySelector('.js-nav-button').addEventListener('click',()=>{
+  const nav = document.querySelector('.js-nav');
+  if(nav.style.transform === ''){
+     nav.style.transform = 'translateX(100%)';
+  }else{
+    nav.style.transform = '';
+  }
+  
+});
+
+
+document.querySelector('.js-contact-button').addEventListener('click',()=>{
+  const element = document.querySelector('.js-contact-links');
+ 
+  if(element.style.visibility !== 'visible'){
+    element.style.visibility = 'visible';
+  }else{
+    element.style.visibility = 'hidden';
+  }
+
+});
+
+document.querySelector('.js-nav-contact-btn').addEventListener('click',()=>{
+  const element = document.querySelector('.js-nav-contact-links');
+ 
+  if(element.style.visibility !== 'visible'){
+    element.style.visibility = 'visible';
+  }else{
+    element.style.visibility = 'hidden';
+  }
+
+});
+
+
+
 
 
 

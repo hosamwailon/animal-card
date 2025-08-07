@@ -2,6 +2,7 @@
     display: grid;
     grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
     gap: 2vw;
+    
 
 }
 .grid-slot{
@@ -12,6 +13,7 @@
     width: 200px;
     object-fit: cover;
     position:relative;
+    transition: transform .1s ease-in-out;
     
     
 }
@@ -62,6 +64,22 @@
       height: 43px;
     width: 183px;
 }
+ .overlay{
+    background: rgba(0, 0, 0, 0.418);
+     position: fixed;
+     inset: 0 0 0 0;
+     z-index: 1000;
+     pointer-events: none;
+     display:none;
+
+ }
+
+ .grid-slot:hover{
+    z-index: 1100;
+    transform: scale(1.1);
+ }
+
+
 
 
 
