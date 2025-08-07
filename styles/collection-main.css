@@ -1,9 +1,13 @@
 
 .main-container{
     display: flex;
-    flex-direction:column;
     gap: 7vw;
 
+}
+@media(width>400px){
+    .main-container{
+        flex-direction:column;
+    }
 }
 
 .grid-container{
