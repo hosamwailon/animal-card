@@ -170,7 +170,7 @@ input{
 }
 .nav-contact-links{
 
-    display: flex;
+    display: none;
     flex-direction: column;
     padding: 2ch;
     color: white;
