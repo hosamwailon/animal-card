@@ -100,10 +100,10 @@ document.querySelector('.js-contact-button').addEventListener('click',()=>{
 document.querySelector('.js-nav-contact-btn').addEventListener('click',()=>{
   const element = document.querySelector('.js-nav-contact-links');
  
-  if(element.style.visibility !== 'visible'){
-    element.style.visibility = 'visible';
+  if(element.style.display !== 'flex'){
+    element.style.display = 'flex';
   }else{
-    element.style.visibility = 'hidden';
+    element.style.display = 'none';
   }
 
 });
